@@ -1,0 +1,56 @@
+{% extends 'customer/base.html' %}
+
+{% block body %}
+<h3 class="m-4">Query: Знайти елементи меню, що були в тих і тільки тих замовленнях, в яких був елемент меню з назвою @X.</h3>
+
+<form method="post" class="m-4">
+    {% csrf_token %}
+    <label class="input">
+        <span>Name of Menu Item<span>*</span></span>
+        <input type="text" name="name" required>
+    </label>
+    <button type="submit" class="btn btn-success me-1">Submit</button>
+</form>
+
+<div class="row">
+    <div class="col-12">
+        {% if menu_items %}
+        <div class="card bg-light ms-4 me-4 mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-list fa-lg"></i> Menu Item Records
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Category</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for menu_item in menu_items %}
+                                <tr>
+                                    <td>{{ menu_item.name }}</td>
+                                    <td style="max-width: 350px;">{{ menu_item.description }}</td>
+                                    <td><img class="row-image" src="{{ menu_item.image.url }}" style="max-width: 100px; max-height: 100px;"></td>
+                                    <td>{{ menu_item.price }} uah</td>
+                                    <td>{{ menu_item.category.name }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                </p>
+            </div>
+        </div>
+        {% else %}
+            <h5 class="alert alert-primary ms-4 me-4">No Menu Item Records</h5>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

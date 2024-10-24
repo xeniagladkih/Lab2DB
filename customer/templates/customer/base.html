@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Order System</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+        <body class="d-flex flex-column min-vh-100">
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'index' %}">
+                        <i class="fa-solid fa-cart-shopping fa-lg"></i> Order System
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-list fa-lg"></i> All Menu Items
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{% url 'menu-item' %}">
+                                    <i class="fa-solid fa-list fa-lg"></i> All Menu Items
+                                </a>
+                                <a class="dropdown-item" href="{% url 'category' %}">
+                                    <i class="fa-solid fa-list fa-lg"></i> All Categories
+                                </a>
+                                <a class="dropdown-item" href="{% url 'customer' %}">
+                                    <i class="fa-solid fa-list fa-lg"></i> All Customers
+                                </a>
+                                <a class="dropdown-item" href="{% url 'order' %}">
+                                    <i class="fa-solid fa-list fa-lg"></i> All Orders
+                                </a>
+                                <a class="dropdown-item" href="{% url 'order-item' %}">
+                                    <i class="fa-solid fa-list fa-lg"></i> All Order Items
+                                </a>
+                                <a class="dropdown-item" href="{% url 'shipping-address' %}">
+                                    <i class="fa-solid fa-list fa-lg"></i> All Shipping Addresses
+                                </a>
+                            </div>
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-plus fa-lg"></i> Add Menu Item
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{% url 'menu-item-add' %}">
+                                    <i class="fa-solid fa-plus fa-lg"></i> Add Menu Item
+                                </a>
+                                <a class="dropdown-item" href="{% url 'category-add' %}">
+                                    <i class="fa-solid fa-plus fa-lg"></i> Add Category
+                                </a>
+                                <a class="dropdown-item" href="{% url 'customer-add' %}">
+                                    <i class="fa-solid fa-plus fa-lg"></i> Add Customer
+                                </a>
+                                <a class="dropdown-item" href="{% url 'order-add' %}">
+                                    <i class="fa-solid fa-plus fa-lg"></i> Add Order
+                                </a>
+                                <a class="dropdown-item" href="{% url 'order-item-add' %}">
+                                    <i class="fa-solid fa-plus fa-lg"></i> Add Order Item
+                                </a>
+                                <a class="dropdown-item" href="{% url 'shipping-address-add' %}">
+                                    <i class="fa-solid fa-plus fa-lg"></i> Add Shipping Address
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i> 1st Query
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{% url 'query-first' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 1st Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-second' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 2nd Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-third' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 3rd Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-fourth' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 4th Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-fifth' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 5th Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-sixth' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 6th Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-seventh' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 7th Query
+                                </a>
+                                <a class="dropdown-item" href="{% url 'query-eighth' %}">
+                                    <i class="fa-solid fa-magnifying-glass fa-lg"></i> 8th Query
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+                {% include 'customer/errors.html' %}
+                {% block body %}
+                {% endblock %}
+            </div>
+
+            <footer class="mt-auto mb-4">
+                <div class="text-center">
+                    <span>
+                        Copyright &copy; <script>document.write(new Date().getFullYear())</script> Kseniya Gladkih
+                    </span>
+                </div>
+            </footer>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+    </head>
+</html>

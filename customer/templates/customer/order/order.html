@@ -1,0 +1,112 @@
+{% extends 'customer/base.html' %}
+
+{% block body %}
+<h3 class="m-4">All Orders</h3>
+<div class="row">
+    <div class="col-12">
+        {% if orders %}
+        <div class="card bg-light ms-4 me-4 mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-list fa-lg"></i> Order Records
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                            <th scope="col">Customer</th>
+                            <th scope="col">Date Ordered</th>
+                            <th scope="col">Complete</th>
+                            <th scope="col">Transaction Id</th>
+                            <th scope="col">Is Shipped</th>
+                            <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>{{ order.customer.email }}</td>
+                                    <td>{{ order.date_ordered }}</td>
+                                    <td>{{ order.complete }}</td>
+                                    <td>{{ order.transaction_id }}</td>
+                                    <td>{{ order.is_shipped }}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-success me-1" href="{% url 'view-order' order.id %}" data-bs-toggle="modal" data-bs-target="#myModal{{order.id}}">
+                                            <i class="fa-solid fa-circle-info fa-lg"></i>
+                                        </button>
+
+                                        <div class="modal" id="myModal{{order.id}}" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">
+                                                        {{ order.id }}
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <ul class="list-unstyled">
+                                                        <li>Order Customer: <strong>{{ order.customer.email }}</strong></li>
+                                                        <li>Order Date Ordered: <strong>{{ order.date_ordered }}</strong></li>
+                                                        <li>Order Complete: <strong>{{ order.complete }}</strong></li>
+                                                        <li>Order Transaction Id: <strong>{{ order.transaction_id }}</strong></li>
+                                                        <li>Order Is Shipped: <strong>{{ order.is_shipped }}</strong></li>
+                                                    </ul>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a class="btn btn-warning me-1" href="{% url 'order-edit' order.id %}">
+                                            <i class="fa-solid fa-pen-to-square fa-lg"></i>
+                                        </a>
+
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{order.id}}">
+                                            <i class="fa-solid fa-trash-can fa-lg"></i>
+                                        </button>
+
+                                        <div class="modal" id="delete{{order.id}}" tabindex="-1" aria-labelledby="myModalLabel2" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title">
+                                                            {{ order.id }}
+                                                        </h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Are you sure you want to delete this order?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <form action="{% url 'order-delete' order.id %}" method="POST">
+                                                            {% csrf_token %}
+                                                            <input type="submit" class="btn btn-primary" value="Delete">
+                                                        </form>
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                </p>
+            </div>
+        </div>
+        {% else %}
+            <h5 class="alert alert-primary ms-4 me-4">No Order Records</h5>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,275 @@
+---------------------------------------------------------------------------------------------------------------
+Result of Query 4
+Description: Знайти елементи меню, які були замовлені клієнтом з електронною адресою @X.
+Date and Time: 2023-05-28 22:39:32.998489
+
+Query Parameters:
+Email: alina333alina888@gmail.com
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 1
+Description: Знайти клієнтів, які замовили не менше @X елементів меню з категорії @Y.
+Date and Time: 2023-05-28 22:43:32.894722
+
+Query Parameters:
+Category: Drinks
+Number: 1
+
+Obtained Customers:
+4 Sam
+5 Kseniya
+---------------------------------------------------------------------------------------------------------------
+Result of Query 1
+Description: Знайти клієнтів, які замовили не менше @X елементів меню з категорії @Y.
+Date and Time: 2023-05-29 01:25:43.882290
+
+Query Parameters:
+Category: Rolls
+Number: 1
+
+Obtained Customers:
+3 Alina
+4 Sam
+6 Kseniya
+---------------------------------------------------------------------------------------------------------------
+Result of Query 1
+Description: Знайти клієнтів, які замовили не менше @X елементів меню з категорії @Y.
+Date and Time: 2023-05-29 01:26:02.941226
+
+Query Parameters:
+Category: Rolls
+Number: 2
+
+Obtained Customers:
+---------------------------------------------------------------------------------------------------------------
+Result of Query 1
+Description: Знайти клієнтів, які замовили не менше @X елементів меню з категорії @Y.
+Date and Time: 2023-05-29 01:26:07.897886
+
+Query Parameters:
+Category: Rolls
+Number: 2
+
+Obtained Customers:
+---------------------------------------------------------------------------------------------------------------
+Result of Query 1
+Description: Знайти клієнтів, які замовили не менше @X елементів меню з категорії @Y.
+Date and Time: 2023-05-29 01:26:11.849401
+
+Query Parameters:
+Category: Rolls
+Number: 1
+
+Obtained Customers:
+3 Alina
+4 Sam
+6 Kseniya
+---------------------------------------------------------------------------------------------------------------
+Result of Query 2
+Description: Знайти замовлення, які прямували до міста @X та були доставлені.
+Date and Time: 2023-05-29 01:28:23.555764
+
+Query Parameters:
+City: Dnipro
+Obtained Orders:
+9
+11
+---------------------------------------------------------------------------------------------------------------
+Result of Query 2
+Description: Знайти замовлення, які прямували до міста @X та були доставлені.
+Date and Time: 2023-05-29 01:28:26.789763
+
+Query Parameters:
+City: Kyiv
+Obtained Orders:
+5
+---------------------------------------------------------------------------------------------------------------
+Result of Query 2
+Description: Знайти замовлення, які прямували до міста @X та були доставлені.
+Date and Time: 2023-05-29 01:28:33.344016
+
+Query Parameters:
+City: Dnipro
+Obtained Orders:
+9
+11
+---------------------------------------------------------------------------------------------------------------
+Result of Query 3
+Description: Знайти клієнтів, які зробили принаймні @X замовлень.
+Date and Time: 2023-05-29 01:30:55.728223
+
+Query Parameters:
+Number: 2
+
+Obtained Customers:
+3 Alina
+4 Sam
+---------------------------------------------------------------------------------------------------------------
+Result of Query 4
+Description: Знайти елементи меню, які були замовлені клієнтом з електронною адресою @X.
+Date and Time: 2023-05-29 01:32:08.655524
+
+Query Parameters:
+Email: alina333alina888@gmail.com
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 5
+Description: Знайти елементи меню з категорії з назвою @X.
+Date and Time: 2023-05-29 01:36:23.941838
+
+Query Parameters:
+Category: Drinks
+
+Obtained Menu Items:
+Rose Fentimans Lemonade
+Dr Pepper dark berry
+---------------------------------------------------------------------------------------------------------------
+Result of Query 6
+Description: Знайти елементи меню, що були замовлені принаймні всіма клієнтами, які замовили елемент меню з назвою @X.
+Date and Time: 2023-05-29 01:40:08.725582
+
+Query Parameters:
+Name: Salmon nigiri
+
+Obtained Menu Items:
+---------------------------------------------------------------------------------------------------------------
+Result of Query 6
+Description: Знайти елементи меню, що були замовлені принаймні всіма клієнтами, які замовили елемент меню з назвою @X.
+Date and Time: 2023-05-29 01:40:14.953079
+
+Query Parameters:
+Name: Salmon sashimi
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 6
+Description: Знайти елементи меню, що були замовлені принаймні всіма клієнтами, які замовили елемент меню з назвою @X.
+Date and Time: 2023-05-29 01:40:24.274409
+
+Query Parameters:
+Name: Yamamoto
+
+Obtained Menu Items:
+Yamamoto
+---------------------------------------------------------------------------------------------------------------
+Result of Query 6
+Description: Знайти елементи меню, що були замовлені принаймні всіма клієнтами, які замовили елемент меню з назвою @X.
+Date and Time: 2023-05-29 01:40:35.186255
+
+Query Parameters:
+Name: Salmon sashimi
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 7
+Description: Знайти елементи меню, що були в тих і тільки тих замовленнях, в яких був елемент меню з назвою @X.
+Date and Time: 2023-05-29 01:44:11.717500
+
+Query Parameters:
+Name: Salmon sashimi
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 7
+Description: Знайти елементи меню, що були в тих і тільки тих замовленнях, в яких був елемент меню з назвою @X.
+Date and Time: 2023-05-29 01:44:18.930012
+
+Query Parameters:
+Name: Yamamoto
+
+Obtained Menu Items:
+Yamamoto
+Salmon nigiri with caviar
+Salmon sashimi
+Rose Fentimans Lemonade
+---------------------------------------------------------------------------------------------------------------
+Result of Query 8
+Description: Знайти клієнтів, які замовляли всі елементи меню, що і клієнт з електронною адресою @X.
+Date and Time: 2023-05-29 01:46:08.850793
+
+Query Parameters:
+Number: alina333alina888@gmail.com
+
+Obtained Customers:
+3 Alina
+6 Kseniya
+---------------------------------------------------------------------------------------------------------------
+Result of Query 6
+Description: Знайти елементи меню, що були замовлені принаймні всіма клієнтами, які замовили елемент меню з назвою @X.
+Date and Time: 2023-05-29 13:30:18.960818
+
+Query Parameters:
+Name: Salmon sashimi
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 7
+Description: Знайти елементи меню, що були в тих і тільки тих замовленнях, в яких був елемент меню з назвою @X.
+Date and Time: 2023-05-29 13:33:48.612484
+
+Query Parameters:
+Name: Yamamoto
+
+Obtained Menu Items:
+Yamamoto
+Salmon nigiri with caviar
+Salmon sashimi
+Rose Fentimans Lemonade
+---------------------------------------------------------------------------------------------------------------
+Result of Query 7
+Description: Знайти елементи меню, що були в тих і тільки тих замовленнях, в яких був елемент меню з назвою @X.
+Date and Time: 2023-05-29 13:35:44.278257
+
+Query Parameters:
+Name: Salmon sashimi
+
+Obtained Menu Items:
+Yamamoto
+Salmon sashimi
+---------------------------------------------------------------------------------------------------------------
+Result of Query 8
+Description: Знайти клієнтів, які замовляли всі елементи меню, що і клієнт з електронною адресою @X.
+Date and Time: 2023-05-29 13:41:58.097144
+
+Query Parameters:
+Number: alina333alina888@gmail.com
+
+Obtained Customers:
+3 Alina
+6 Kseniya
+---------------------------------------------------------------------------------------------------------------
+Result of Query 8
+Description: Знайти клієнтів, які замовляли всі елементи меню, що і клієнт з електронною адресою @X.
+Date and Time: 2023-05-29 14:11:58.621984
+
+Query Parameters:
+Number: alina333alina888@gmail.com
+
+Obtained Customers:
+3 Alina
+6 Kseniya
+---------------------------------------------------------------------------------------------------------------
+Result of Query 8
+Description: Знайти клієнтів, які замовляли всі елементи меню, що і клієнт з електронною адресою @X.
+Date and Time: 2023-05-29 14:13:13.416945
+
+Query Parameters:
+Number: alina333alina888@gmail.com
+
+Obtained Customers:
+3 Alina
+6 Kseniya

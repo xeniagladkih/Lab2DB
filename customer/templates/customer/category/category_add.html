@@ -1,0 +1,29 @@
+{% extends 'customer/base.html' %}
+
+{% block body %}
+<h3 class="text-center m-4">Add Category</h3>
+{% if success %}
+    <div class="alert alert-success" role="alert">
+        The new category added successfully.
+        <a href="{% url 'category' %}" class="alert-link">Go to Category Page.</a>
+    </div>
+{% else %}
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card bg-light mb-3">
+                <div class="card-header">
+                    <i class="fa-solid fa-bars fa-lg"></i> Add Category
+                </div>
+                <div class="card-body">
+                    <form action="{% url 'category-add' %}" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Add</button>
+                        <a href="{% url 'category' %}" class="btn btn-secondary">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+{% endblock %}
